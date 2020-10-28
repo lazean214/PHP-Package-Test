@@ -1,0 +1,54 @@
+{
+    "name": "lazean214/ecommerce",
+    "description": "Simple Ecommerce Package",
+    "keywords": [
+        "lazean214",
+        "ecommerce"
+    ],
+    "homepage": "https://github.com/lazean214/ecommerce",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Neil Salazar",
+            "email": "salazar.neil@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lazean214\\Ecommerce\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lazean214\\Ecommerce\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lazean214\\Ecommerce\\EcommerceServiceProvider"
+            ],
+            "aliases": {
+                "Ecommerce": "Lazean214\\Ecommerce\\EcommerceFacade"
+            }
+        }
+    }
+}
